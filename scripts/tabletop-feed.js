@@ -50,7 +50,14 @@ function writeTableWith(dataSource){
     //console.log(dataSource.sheets('sheet1').all());
     //console.log(dataSource.all());
     console.log(dataSource.Sheet1.column_names);
-    console.log(dataSource.Sheet3.elements);
+
+    $.each( dataSource.Sheet1.elements, function( key, value ) {
+        $(value.website).prepend("<p>this</p>");
+        $(value.website).append("<p>this</p>");
+        $(value.website).addClass("website");
+        console.log($(value.website));
+    });
+    //console.log(dataSource.Sheet1.elements);
     
 
     jqueryNoConflict('#demo').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container"></table>');
@@ -58,6 +65,21 @@ function writeTableWith(dataSource){
     jqueryNoConflict('#demo3').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container3"></table>');
     jqueryNoConflict('#demo4').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container4"></table>');
     jqueryNoConflict('#demo5').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container5"></table>');
+    jqueryNoConflict('#demo6').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container6"></table>');
+    jqueryNoConflict('#demo7').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container7"></table>');
+    jqueryNoConflict('#demo8').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container8"></table>');
+    jqueryNoConflict('#demo9').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container9"></table>');
+    jqueryNoConflict('#demo10').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container10"></table>');
+    jqueryNoConflict('#demo11').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container11"></table>');
+    jqueryNoConflict('#demo12').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container12"></table>');
+    jqueryNoConflict('#demo13').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container13"></table>');
+    jqueryNoConflict('#demo14').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container14"></table>');
+    jqueryNoConflict('#demo15').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container15"></table>');
+    jqueryNoConflict('#demo16').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container16"></table>');
+    jqueryNoConflict('#demo17').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container17"></table>');
+    jqueryNoConflict('#demo18').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container18"></table>');
+    jqueryNoConflict('#demo19').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container19"></table>');
+
 
     var aTable = jqueryNoConflict('#data-table-container').dataTable({
 		'sPaginationType': 'bootstrap',
@@ -103,6 +125,146 @@ function writeTableWith(dataSource){
         'sPaginationType': 'bootstrap',
         'iDisplayLength': 25,
         'aaData': dataSource.Sheet5.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var fTable = jqueryNoConflict('#data-table-container6').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet6.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var gTable = jqueryNoConflict('#data-table-container7').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet7.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var hTable = jqueryNoConflict('#data-table-container8').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet8.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var iTable = jqueryNoConflict('#data-table-container9').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet9.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var jTable = jqueryNoConflict('#data-table-container10').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet10.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var kTable = jqueryNoConflict('#data-table-container11').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet11.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var lTable = jqueryNoConflict('#data-table-container12').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet12.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var mTable = jqueryNoConflict('#data-table-container13').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet13.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var nTable = jqueryNoConflict('#data-table-container14').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet14.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var oTable = jqueryNoConflict('#data-table-container15').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet15.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var pTable = jqueryNoConflict('#data-table-container16').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet16.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var qTable = jqueryNoConflict('#data-table-container17').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet17.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var rTable = jqueryNoConflict('#data-table-container18').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet18.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var sTable = jqueryNoConflict('#data-table-container19').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet19.elements,
         'aoColumns': createTableColumns(),
         'oLanguage': {
             'sLengthMenu': '_MENU_ records per page'
