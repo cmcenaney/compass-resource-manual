@@ -25,30 +25,61 @@
         </noscript>
 
         <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span12">
-                    <!-- <h1>Demo: tabletop to datatables</h1>
-                    <p>Use <a href="http://builtbybalance.com/Tabletop/">Tabletop.js</a> to pull json from Google Spreadsheet and feed it to the <a href="http://datatables.net/">DataTables</a> jQuery plugin.</p>
-                    <p>Demo by <a href="https://twitter.com/CourierEssig">Chris Essig</a> &amp; <a href="https://twitter.com/ChrisLKeller">Chris Keller</a> and made possible thanks to the Open Source work of <a href="http://twitter.com/dangerscarf">Jonathan Soma</a> &amp; <a href="https://github.com/DataTables">Allan Jardine</a>.</p>
-                    <ul>
-                        <li><p><a href="http://projects.chrislkeller.com/demos/tabletop_to_datatables">Demo Page</a></p></li>
-                        <li><p><a href="https://github.com/chrislkeller/tabletop_to_datatables">Fork the Repo</a></p></li>
-                        <li><p><a href="https://github.com/chrislkeller/tabletop_to_datatables#readme">View the ReadMe</a></p></li>
-                    </ul> -->
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="active"><a href="#home" role="tab" data-toggle="tab">Crisis/Hotline Services</a></li>
+              <li><a href="#profile" role="tab" data-toggle="tab">Child Services/Resources</a></li>
+              <li><a href="#messages" role="tab" data-toggle="tab">Disability</a></li>
+              <li><a href="#settings" role="tab" data-toggle="tab">Domestic Violence Services</a></li>
+              <li><a href="#donations" role="tab" data-toggle="tab">Donations/Volunteering/Holiday Help</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div id="demo"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="profile"><div class="row-fluid">
+                    <div class="span12">
+                        <div id="demo2"></div>
+                    </div>
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span12">
-                    <div id="demo"></div>
+                <div class="tab-pane" id="messages">
+                    <div class="span12">
+                        <div id="demo3"></div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="settings">
+                    <div class="span12">
+                        <div id="demo4"></div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="donations">
+                    <div class="span12">
+                        <div id="demo5"></div>
+                    </div>
                 </div>
             </div>
+
+
+
+            
+            
         </div>
 
         <script src="http://cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
         <script src="scripts/tabletop.js"></script>
         <script src="scripts/tabletop-feed.js"></script>
         <script src="scripts/data-tables-bootstrap.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
         <script src="scripts/bootstrap-dropdown.js"></script>
+        <script src="scripts/script.js"></script>
 
         <!-- begin analytics -->
         <script type="text/javascript">

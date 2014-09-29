@@ -12,9 +12,13 @@ function initializeTabletopObject(dataSpreadsheet){
     Tabletop.init({
         key: dataSpreadsheet,
         callback: writeTableWith,
-        simpleSheet: true,
+
         debug: false
     });
+
+    //var sheet1 = tabletop.sheets("Sheet1");
+
+
 
    // Tabletop.sheets('Sheet1').all();
    // console.log(Tabletop);   
@@ -45,18 +49,69 @@ function createTableColumns(){
 function writeTableWith(dataSource){
     //console.log(dataSource.sheets('sheet1').all());
     //console.log(dataSource.all());
+    console.log(dataSource.Sheet1.column_names);
+    console.log(dataSource.Sheet3.elements);
+    
 
     jqueryNoConflict('#demo').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container"></table>');
+    jqueryNoConflict('#demo2').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container2"></table>');
+    jqueryNoConflict('#demo3').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container3"></table>');
+    jqueryNoConflict('#demo4').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container4"></table>');
+    jqueryNoConflict('#demo5').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container5"></table>');
 
-    var oTable = jqueryNoConflict('#data-table-container').dataTable({
+    var aTable = jqueryNoConflict('#data-table-container').dataTable({
 		'sPaginationType': 'bootstrap',
 		'iDisplayLength': 25,
-        'aaData': dataSource,
+        'aaData': dataSource.Sheet1.elements,
         'aoColumns': createTableColumns(),
         'oLanguage': {
             'sLengthMenu': '_MENU_ records per page'
         }
     });
+
+    var bTable = jqueryNoConflict('#data-table-container2').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet2.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var cTable = jqueryNoConflict('#data-table-container3').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet3.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var dTable = jqueryNoConflict('#data-table-container4').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet4.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+    var eTable = jqueryNoConflict('#data-table-container5').dataTable({
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
+        'aaData': dataSource.Sheet5.elements,
+        'aoColumns': createTableColumns(),
+        'oLanguage': {
+            'sLengthMenu': '_MENU_ records per page'
+        }
+    });
+
+
+    
+
 };
 
 //define two custom functions (asc and desc) for string sorting
