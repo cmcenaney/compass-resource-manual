@@ -49,13 +49,27 @@ function createTableColumns(){
 function writeTableWith(dataSource){
     //console.log(dataSource.sheets('sheet1').all());
     //console.log(dataSource.all());
-    console.log(dataSource.Sheet1.column_names);
+    //console.log(dataSource.Sheet1.column_names);
+    console.log(dataSource);
+    $.each(dataSource, function(key, value){
+        //console.log(value.elements);
+        $.each(value.elements, function(key, value){
+            // console.log(value.website);
+            // console.log(this);
+            $('tr').find('td:eq(2)').append("<p>gehwhajehw</p>");
+
+        });
+        //console.log(dataSource);
+    });
+
+    
+    
 
     $.each( dataSource.Sheet1.elements, function( key, value ) {
         $(value.website).prepend("<p>this</p>");
         $(value.website).append("<p>this</p>");
         $(value.website).addClass("website");
-        console.log($(value.website));
+        //console.log($(value.website));
     });
     //console.log(dataSource.Sheet1.elements);
     
@@ -275,6 +289,8 @@ function writeTableWith(dataSource){
     
 
 };
+
+
 
 //define two custom functions (asc and desc) for string sorting
 jQuery.fn.dataTableExt.oSort['string-case-asc']  = function(x,y) {

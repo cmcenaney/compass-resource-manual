@@ -9,8 +9,10 @@
         <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
         <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="css/demo_table.css" />
+        <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css">
+        
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css" />
         <!-- end css -->
 
         <!-- begin scripts -->
@@ -23,13 +25,44 @@
         <noscript>
             <div id="noscript_note">You must have JavaScript enabled to view this page.</div>
         </noscript>
+        <div id="wrapper">
 
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="http://compassctr.org/" target="_blank">
+                        <img src="images/logo.png">
+                    </a>
+                </li>
+                <li class="active"><a href="#home" role="tab" data-toggle="tab">Crisis/Hotline Services</a></li>
+              <li><a href="#profile" role="tab" data-toggle="tab">Child Services/Resources</a></li>
+              <li><a href="#messages" role="tab" data-toggle="tab">Disability</a></li>
+              <li><a href="#settings" role="tab" data-toggle="tab">Domestic Violence Services</a></li>
+              <li><a href="#donations" role="tab" data-toggle="tab">Donations/Volunteering/Holiday</a></li>
+              <li><a href="#education" role="tab" data-toggle="tab">Education</a></li>
+              <li><a href="#employment" role="tab" data-toggle="tab">Employment</a></li>
+              <li><a href="#financial" role="tab" data-toggle="tab">Financial Assistance</a></li>
+              <li><a href="#food" role="tab" data-toggle="tab">Food/Clothing/Thrift</a></li>
+              <li><a href="#health" role="tab" data-toggle="tab">Health Services</a></li>
+              <li><a href="#housing" role="tab" data-toggle="tab">Housing</a></li>
+              <li><a href="#latino" role="tab" data-toggle="tab">Latino/Refugee/Immigration</a></li>
+              <li><a href="#legal" role="tab" data-toggle="tab">Legal</a></li>
+              <li><a href="#lgbtq" role="tab" data-toggle="tab">LGBTQ Resources</a></li>
+              <li><a href="#rape" role="tab" data-toggle="tab">Rape/Sexual Assault</a></li>
+              <li><a href="#senior" role="tab" data-toggle="tab">Senior Services</a></li>
+              <li><a href="#transportation" role="tab" data-toggle="tab">Transportation</a></li>
+              <li><a href="#unc" role="tab" data-toggle="tab">UNC Students</a></li>
+              <li><a href="#shelters" role="tab" data-toggle="tab">All NC DV Shelters</a></li>
+            </ul>
+        </div>
+        
+        <div id="page-content-wrapper">
         <div class="container-fluid">
 
-
+            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
 
             <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
+            <!-- <ul class="nav nav-tabs" role="tablist">
               <li class="active"><a href="#home" role="tab" data-toggle="tab">Crisis/Hotline Services</a></li>
               <li><a href="#profile" role="tab" data-toggle="tab">Child Services/Resources</a></li>
               <li><a href="#messages" role="tab" data-toggle="tab">Disability</a></li>
@@ -49,7 +82,9 @@
               <li><a href="#transportation" role="tab" data-toggle="tab">Transportation</a></li>
               <li><a href="#unc" role="tab" data-toggle="tab">UNC Students</a></li>
               <li><a href="#shelters" role="tab" data-toggle="tab">All NC DV Shelters</a></li>
-            </ul>
+            </ul> -->
+
+            
 
             <!-- Tab panes -->
             <div class="tab-content">
@@ -158,6 +193,8 @@
             
             
         </div>
+    </div>
+</div>
 
         <script src="http://cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
         <script src="scripts/tabletop.js"></script>
