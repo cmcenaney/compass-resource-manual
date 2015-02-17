@@ -3,12 +3,24 @@ var jqueryNoConflict = jQuery;
 // begin main function
 jqueryNoConflict(document).ready(function(){
 
-    initializeTabletopObject('https://docs.google.com/spreadsheets/d/1ab8xfG0taMF1cW-0PotiOFJ2gPMCIiPtTmSsZObEXDk/pubhtml');
+    //initializeTabletopObject('https://docs.google.com/spreadsheets/d/1ab8xfG0taMF1cW-0PotiOFJ2gPMCIiPtTmSsZObEXDk/pubhtml');
+    initializeTabletopObject('https://docs.google.com/spreadsheets/d/1kVM7vWKGSCAoLhbIMUaCsgcd0WExq5vOC1Nu2aesv5Q/pubhtml');
 
+    
+    //1kVM7vWKGSCAoLhbIMUaCsgcd0WExq5vOC1Nu2aesv5Q
 });
+
+// function init() {
+//   Tabletop.init( { key: '0AmYzu_s7QHsmdDNZUzRlYldnWTZCLXdrMXlYQzVxSFE',
+//                    callback: function(data, tabletop) { console.log(data) },
+//                    simpleSheet: true } )
+// }
+
+
 
 // pull data from google spreadsheet
 function initializeTabletopObject(dataSpreadsheet){
+
     Tabletop.init({
         key: dataSpreadsheet,
         callback: writeTableWith,
@@ -36,12 +48,12 @@ function createTableColumns(){
     is what happens with the More Info column header */
 
     var tableColumns =   [
-		{'mDataProp': 'organization', 'sTitle': 'Organization', 'sClass': 'left'},
-		{'mDataProp': 'phone', 'sTitle': 'Phone Number', 'sClass': 'left'},
+        {'mDataProp': 'organization', 'sTitle': 'Organization', 'sClass': 'left'},
+        {'mDataProp': 'phone', 'sTitle': 'Phone Number', 'sClass': 'left'},
         {'mDataProp': 'address', 'sTitle': 'Address', 'sClass': 'left'},
-		{'mDataProp': 'website', 'sTitle': 'Website', 'sClass': 'left'},
+        {'mDataProp': 'website', 'sTitle': 'Website', 'sClass': 'left'},
         {'mDataProp': 'population', 'sTitle': 'Population Served/Eligibility', 'sClass': 'left'}
-	];
+    ];
     return tableColumns;
 }
 
@@ -50,7 +62,7 @@ function writeTableWith(dataSource){
     //console.log(dataSource.sheets('sheet1').all());
     //console.log(dataSource.all());
     //console.log(dataSource.Sheet1.column_names);
-    console.log(dataSource);
+   
     $.each(dataSource, function(key, value){
         //console.log(value.elements);
         $.each(value.elements, function(key, value){
@@ -66,12 +78,102 @@ function writeTableWith(dataSource){
     
 
     $.each( dataSource.Sheet1.elements, function( key, value ) {
-        $(value.website).prepend("<p>this</p>");
-        $(value.website).append("<p>this</p>");
-        $(value.website).addClass("website");
-        //console.log($(value.website));
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
     });
-    //console.log(dataSource.Sheet1.elements);
+
+    $.each( dataSource.Sheet2.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet3.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet4.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet5.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet6.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet7.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet8.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet9.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet10.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet11.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet12.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet13.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet14.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet15.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet16.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet17.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet18.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+    $.each( dataSource.Sheet19.elements, function( key, value ) {
+        itemWebsite = value.website
+        value.website = '<a href="http://'+itemWebsite+'" target="_blank">'+itemWebsite+'</a>'
+    });
+
+
+ 
     
 
     jqueryNoConflict('#demo').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container"></table>');
@@ -96,8 +198,8 @@ function writeTableWith(dataSource){
 
 
     var aTable = jqueryNoConflict('#data-table-container').dataTable({
-		'sPaginationType': 'bootstrap',
-		'iDisplayLength': 25,
+        'sPaginationType': 'bootstrap',
+        'iDisplayLength': 25,
         'aaData': dataSource.Sheet1.elements,
         'aoColumns': createTableColumns(),
         'oLanguage': {
@@ -294,9 +396,9 @@ function writeTableWith(dataSource){
 
 //define two custom functions (asc and desc) for string sorting
 jQuery.fn.dataTableExt.oSort['string-case-asc']  = function(x,y) {
-	return ((x < y) ? -1 : ((x > y) ?  0 : 0));
+    return ((x < y) ? -1 : ((x > y) ?  0 : 0));
 };
 
 jQuery.fn.dataTableExt.oSort['string-case-desc'] = function(x,y) {
-	return ((x < y) ?  1 : ((x > y) ? -1 : 0));
+    return ((x < y) ?  1 : ((x > y) ? -1 : 0));
 };
